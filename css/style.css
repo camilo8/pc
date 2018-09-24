@@ -1,0 +1,22 @@
+/*style basic*/
+*{margin: 0;padding: 0; box-sizing: border-box;}
+/*style of index-logo*/
+.container-fluid .row .login .logo{height:300px;}
+.container-fluid .row .login .logo img{width:100%;}
+/*style of index-titulo-login*/
+.container-fluid .row .login .titulo-login h1{text-align: center;}
+/*style of  index-btn-login*/
+.container-fluid .row .login  .btn-login button{width:100%;}
+/*style of portada*/
+.container-fluid .row .portada img { width: 100%;}
+.container-fluid .row .portada .guide {position: relative; top:40px; }
+.container-fluid .row .portada .guide a{border:2px solid white; padding:5px; color:white; text-decoration: none; }
+.container-fluid .row .footer h4{ text-align: center;line-height:60px;}
+/*responsive*/
+@media only screen and (max-width:576px){
+	.container-fluid .row .login .logo img {height:300px;}
+}
+@media only screen and (max-width:768px){
+	.container-fluid .row .login .logo img {height:300px;}
+}
+
