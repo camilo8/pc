@@ -19,4 +19,39 @@
 @media only screen and (max-width:768px){
 	.container-fluid .row .login .logo img {height:300px;}
 }
-
+										/*style  of principal*/ 
+/*style of principal-admit*/
+.container-fluid .row .admit h4{text-align: center; background: #005a99; color: white;}
+/*style of  principal-titulo*/
+.container-fluid .row .titulo h4{ text-align: center; color: white;}
+.container-fluid .row-1{background: #005a99 ; border-bottom: 2px; }
+/*style of  principal-username*/
+.container-fluid .row .username h4{ text-align: center;}
+/*style of  principal-titulo-principal*/
+.container-fluid .row .titulo-principal h4{background: #005a99 ; color: white;}
+.container-fluid .row .menu-1 a:hover {background: #005a99 ; color:white;}
+	.container-fluid .row .menu a:hover {background: #005a99 ; color:white;}
+/*Responsive*/
+@media only screen and (max-width:1500px){
+	.container-fluid .row .menu-1{display:none;}
+	
+}
+@media only screen and (max-width:992px){
+	.container-fluid .row .username h4{font-size:15px;}
+}
+@media only screen and (max-width:778px){
+	.container-fluid .row .username h4{font-size:10px;}
+	.container-fluid .row .menu-1 {display:flex; }
+	.container-fluid .row .menu {display:none;}
+	.container-fluid .row .admit h4{font-size:15px;}
+	.container-fluid .row .titulo h4{font-size:15px;}
+	.container-fluid .row .titulo-principal h4{font-size:15px;}
+}
+@media only screen and (max-width:576px){
+	.container-fluid .row .username h4{font-size:10px;}
+	.container-fluid .row .menu-1 {display:flex; }
+	.container-fluid .row .menu {display:none;}
+	.container-fluid .row .admit h4{font-size:15px;}
+	.container-fluid .row .titulo h4{font-size:15px;}
+	.container-fluid .row .titulo-principal h4{font-size:15px;}
+}
