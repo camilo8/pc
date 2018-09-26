@@ -24,16 +24,18 @@
 .container-fluid .row .admit h4{text-align: center; background: #005a99; color: white;}
 /*style of  principal-titulo*/
 .container-fluid .row .titulo h4{ text-align: center; color: white;}
-.container-fluid .row-1{background: #005a99 ; border-bottom: 2px; }
+.container-fluid .row-1{background: #005a99 ; }
+.container-fluid .row-2{border-bottom:2px solid #005a99;}
 /*style of  principal-username*/
 .container-fluid .row .username h4{ text-align: center;}
 /*style of  principal-titulo-principal*/
-.container-fluid .row .titulo-principal h4{background: #005a99 ; color: white;}
+.container-fluid .row .titulo-principal {background: #005a99 ; color: white;}
 .container-fluid .row .menu-1 a:hover {background: #005a99 ; color:white;}
-	.container-fluid .row .menu a:hover {background: #005a99 ; color:white;}
+.container-fluid .row .menu a:hover {background: #005a99 ; color:white;}
+.container-fluid .row .menu {border-right:2px solid #005a99;}
 /*Responsive*/
 @media only screen and (max-width:1500px){
-	.container-fluid .row .menu-1{display:none;}
+	.container-fluid .row .menu-1{display:none; border-right:2px solid #005a99;}
 	
 }
 @media only screen and (max-width:992px){
@@ -55,3 +57,7 @@
 	.container-fluid .row .titulo h4{font-size:15px;}
 	.container-fluid .row .titulo-principal h4{font-size:15px;}
 }
+												/*style of form */
+/*style of from-from-5*/
+.container .row .form-5   button{ margin-top: 20px;}
+/*responsive*/
