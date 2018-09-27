@@ -11,7 +11,8 @@
 .container-fluid .row .portada img { width: 100%;}
 .container-fluid .row .portada .guide {position: relative; top:40px; }
 .container-fluid .row .portada .guide a{border:2px solid white; padding:5px; color:white; text-decoration: none; }
-.container-fluid .row .footer h4{ text-align: center;line-height:60px;}
+.container-fluid .row .footer h4{ text-align: center;line-height:78px; color: white;}
+.container-fluid .row .footer{background: #005a99;}
 /*responsive*/
 @media only screen and (max-width:576px){
 	.container-fluid .row .login .logo img {height:300px;}
@@ -60,4 +61,8 @@
 												/*style of form */
 /*style of from-from-5*/
 .container .row .form-5   button{ margin-top: 20px;}
-/*responsive*/
+											/*style of list students*/
+.container .row .search input{margin-left: 50px; margin-top: 10px;}
+.container .row .icon-search1 span{font-size:20px; margin-left:50px; line-height:50px;}
+
+
