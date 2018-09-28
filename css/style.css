@@ -1,5 +1,6 @@
 /*style basic*/
 *{margin: 0;padding: 0; box-sizing: border-box;}
+label{color: black;}
 /*style of index-logo*/
 .container-fluid .row .login .logo{height:300px;}
 .container-fluid .row .login .logo img{width:100%;}
@@ -69,4 +70,5 @@
 									   /*style of footer*/
  footer{margin-top: 420px; background: #005a99; color: white; }		
  footer h1{font-size: 30px; text-align: center;}				
-
+/*style of icon*/
+.container-fluid .row .detalles span{font-size: 30px;}
