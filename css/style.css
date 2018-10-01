@@ -28,6 +28,7 @@ label{color: black;}
 .container-fluid .row .titulo h4{ text-align: center; color: white;}
 .container-fluid .row-1{background: #005a99 ; }
 .container-fluid .row-2{border-bottom:2px solid #005a99;}
+.container-fluid .row-2 a{font-family: Arial, Helvetica, sans-serif;font-size: 15px; text-decoration: none;}
 /*style of  principal-username*/
 .container-fluid .row .username h4{ text-align: center;}
 /*style of  principal-titulo-principal*/
