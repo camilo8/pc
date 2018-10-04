@@ -24,19 +24,21 @@
 			 </div>
 			 <div class="user col-12">
 				<div class="form-group">
-					<label for="exampleFormControlInput1">Username</label>
-					<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="car741">
-				  </div>
-			 </div>
-			 <div class="user col-12">
-				<div class="form-group">
-					<label for="exampleFormControlInput2">Password</label>
-					<input type="password" class="form-control" id="exampleFormControlInput2" >
-				  </div>
-			 </div>
-			 <div class="btn-login col-12">
-				<button class="btn btn-primary">Inicar</button>
-			 </div>
+					<form action="controllers/controllers-user.php" method="POST">
+						<label for="exampleFormControlInput1">Username</label>
+						<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="car741" name="User">
+					</div>
+				</div>
+				<div class="user col-12">
+					<div class="form-group">
+						<label for="exampleFormControlInput2">Password</label>
+						<input type="password" class="form-control" id="exampleFormControlInput2" name="Passwor" >
+					</div>
+				</div>
+				<div class="btn-login col-12">
+					<button  type="submit" class="btn btn-primary">Inicar</button>
+				</div>
+			</form>
 		  </div>
 		  <div class="portada col-xs-12 col-sm- col-md-8 col-lg-8">
 			  <div class="guide col-12">
