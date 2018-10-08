@@ -18,9 +18,11 @@ class User{
 		 $this->passwor = $passwor;
 		 $query = $this->cone->prepare($sql);
 		 $query->execute([
-			'user'=>$this->codigo,
+			'user'=>$this->user,
 			'passwor'=>$this->passwor
 		 ]);
+		 $result = $query->fetchALL(\PDO::FETCH_ASSOC);
+		 return $result;
 	}
 }
 ?>

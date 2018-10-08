@@ -62,7 +62,7 @@ label{color: black;}
 }
 												/*style of form */
 /*style of from-from-5*/
-.container .row .form-5   button{ margin-top: 20px;}
+.container .row .form-5   button{ margin-top: 20px; margin-bottom:20px;}
 											/*style of list students*/
 .container .row .search input{margin-left: 50px; margin-top: 10px;}
 .container .row .icon-search1 span{font-size:20px; margin-left:50px; line-height:50px;}

@@ -1,3 +1,9 @@
+<?php 
+ use pc\Consult;
+ require_once('../class/consult.php');
+ $consult2 = new Consult();
+ $result = $consult2->Consult1();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,13 +27,28 @@
 			 </div>
 		     <div class="row row-2">
 				  <div class="username col-4 col-xs-3">
-					   <h4><span class="icon-user"></span> Juan Camilo Penagos Yara</h4>
+						<?php 
+					     	session_start();
+						  if(isset($_SESSION['u_nombre'])){
+								  $nombre = $_SESSION['u_nombre'];
+								echo	"<h4><span class='icon-user'> </span> ". $nombre."</h4>";
+							}
+						?>
 				  </div>
 				  <div class="titulo-principal col-8 col-xs-3">
 					   <h4>PC Rental</h4>
 					</div>
 					<div class="close col-2">
-						 <a href="">Cerrar session</a>
+					<?php 
+								
+								if(isset($_SESSION['u_nombre'])){
+									?>
+									<a href="../index.html">Cerrar session</a>
+									<?php 
+								}else{
+									header("location:../index.html");
+								}		
+				        ?>
 					</div>
 			 </div>
 			<div class="row">
@@ -55,50 +76,93 @@
 								  <div class="row">
 									 <div class="form-1 col-4 col-xs-8 col-sm-8 col-lg-4" >
 										 <div class="form-group">
+											 <form action="../controllers/controllers-datos.php" method="GET" >
 											 <label for="exampleFormControlInput1">Nombre</label>
-											 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+											 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="Namepre">
 											</div>
 										</div>
 										<div class="form-2 col-2  col-xs-8 col-sm-8 col-lg-2">
-												<div class="form-group">
-														<label for="exampleFormControlSelect1">Portatil</label>
-														<select class="form-control" id="exampleFormControlSelect1">
-															<option>1</option>
-															<option>2</option>
-															<option>3</option>
-															<option>4</option>
-															<option>5</option>
+													 <div class="form-group">
+														 <label for="exampleFormControlSelect1">Grado</label>
+														 <select class="form-control" id="exampleFormControlSelect1" name="Grado">
+															 <option value="3A">3A</option>
+															 <option value="3B">3B</option>
+															 <option value="4A">4A</option>
+															 <option value="4B">4B</option>
+															 <option value="5A">5A</option>
+															 <option value="5B">5B</option>
+															 <option value="6">6</option>
+															 <option value="6">7</option>
+															 <option value="6">8</option>
+															 <option value="6">9</option>
+															 <option value="6">10</option>
+															 <option value="6">11</option>
 														</select>
 													</div>
 										</div>
-										<div class="form-3 col-2  col-xs-8 col-sm-8 col-lg-2">
-												<div class="form-group">
+										<div class="form-2 col-2  col-xs-8 col-sm-8 col-lg-2">
+													 <div class="form-group">
+														 <label for="exampleFormControlSelect1">Portatil</label>
+														 <select class="form-control" id="exampleFormControlSelect1" name="Portatil">
+														 	 <option value="">Seleccionar</option>
+															 <option value="1">1</option>
+															 <option value="2">2</option>
+															 <option value="3">3</option>
+															 <option value="4">4</option>
+															 <option value="5">5</option>
+															 <option value="6">6</option>
+															 <option value="7">7</option>
+															 <option value="8">8</option>
+															 <option value="9">9</option>
+															 <option value="10">10</option>
+															 <option value="11">11</option>
+															 <option value="12">12</option>
+															 <option value="13">13</option>
+															 <option value="14">14</option>
+															 <option value="15">15</option>
+															 <option value="16">16</option>
+															 <option value="17">17</option>
+															 <option value="18">18</option>
+															 <option value="19">19</option>
+															 <option value="20">20</option>
+															 <option value="21">21</option>
+														</select>
+													</div>
+										</div>
+												<div class="form-3 col-2  col-xs-8 col-sm-8 col-lg-2">
+													<div class="form-group">
 														<label for="exampleFormControlSelect1">Videobeam</label>
-														<select class="form-control" id="exampleFormControlSelect1">
-															<option>1</option>
-															<option>2</option>
-															<option>3</option>
-															<option>4</option>
-															<option>5</option>
+														<select class="form-control" id="exampleFormControlSelect1" name="Videobeam">
+																<option value="">Seleccionar</option>
+														  	<option value="1">1</option>
+															 <option value="2">2</option>
+															 <option value="3">3</option>
+															 <option value="4">4</option>
+															 <option value="5">5</option>
+															 <option value="6">6</option>
+															 <option value="7">7</option>
 														</select>
 													</div>
-										</div>
-										<div class="form-4 col-2  col-xs-8 col-sm-8  col-lg-2">
-												<div class="form-group">
+												</div>
+												<div class="form-4 col-2  col-xs-8 col-sm-8  col-lg-2">
+													<div class="form-group">
 														<label for="exampleFormControlSelect1">Extenciones</label>
-														<select class="form-control" id="exampleFormControlSelect1">
-															<option>1</option>
-															<option>2</option>
-															<option>3</option>
-															<option>4</option>
-															<option>5</option>
+														<select class="form-control" id="exampleFormControlSelect1" name="Extenciones">
+														<option value="">Seleccionar</option>
+															 <option value="1">1</option>
+															 <option value="2">2</option>
+															 <option value="3">3</option>
+															 <option value="4">4</option>
+															 <option value="5">5</option>
+															 <option value="6">6</option>
 														</select>
 													</div>
-										</div>
-										<div class="form-5 col-2  col-xs-8 col-sm-8 col-lg-2">
-											 <button class="btn btn-primary">Entregar</button>
-										</div>
-									</div>
+												</div>
+												<div class="form-5 col-2  col-xs-8 col-sm-8 col-lg-2">
+													<button type="submit" class="btn btn-primary">Entregar</button>
+												</div>
+											</form>
+											</div>
 									<div class="row tabla-1">
 										  <div class="lsit-student col-12 ">
 													<table class="table">
@@ -110,6 +174,7 @@
 																	<th scope="col">Portatil</th>
 																	<th scope="col">Videobeam</th>
 																	<th scope="col">Extenciones</th>
+																	<th scope="col">Nombre</th>
 																	<th scope="col">H.I</th>
 																	<th scope="col">H.F</th>
 																	<th scope="col">VD</th>
@@ -117,38 +182,20 @@
 															</thead>
 															<tbody>
 																<tr>
-																	<th scope="row">1</th>
-																	<td>Mark</td>
-																	<td>Otto</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
+																<?php 
+																  foreach ($result as $value) {
+																	?><th scope="row"><?php echo $value['Id'];?></th>
+																	<td><?php echo $value['Fecha'];?></td>
+																	<td><?php echo $value['Grado'];?></td>
+																	<td><?php echo $value['Portatil'];?></td>
+																	<td><?php echo $value['Videobeam'];?></td>
+																	<td><?php echo $value['Extencion'];?></td>
+																	<td><?php echo $value['NombreCompleto'];?></td>
+																	<td><?php echo $value['HN'];?></td>
+																	<td><?php echo $value['HF'];?></td>
+																	<td><?php echo $value['VG'];?></td>
 																</tr>
-																<tr>
-																	<th scope="row">2</th>
-																	<td>Jacob</td>
-																	<td>Thornton</td>
-																	<td>@fat</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																</tr>
-																<tr>
-																	<th scope="row">3</th>
-																	<td>Larry</td>
-																	<td>the Bird</td>
-																	<td>@twitter</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																</tr>
+																	<?php }?>
 															</tbody>
 														</table>
 											</div>
