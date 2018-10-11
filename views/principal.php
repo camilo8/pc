@@ -1,8 +1,12 @@
 <?php 
  use pc\Consult;
+ use pc\Busqueda;
  require_once('../class/consult.php');
+ require_once('../controllers/buscar.php');
  $consult2 = new Consult();
+ $busqueda2 = new Busqueda();
  $result = $consult2->Consult1();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,8 +87,8 @@
 										</div>
 										<div class="form-2 col-2  col-xs-8 col-sm-8 col-lg-2">
 													 <div class="form-group">
-														 <label for="exampleFormControlSelect1">Grado</label>
-														 <select class="form-control" id="exampleFormControlSelect1" name="Grado">
+														 <label for="">Grado</label>
+														 <select class="form-control" id="hoa" name="Grado">
 															 <option value="3A">3A</option>
 															 <option value="3B">3B</option>
 															 <option value="4A">4A</option>
@@ -92,18 +96,19 @@
 															 <option value="5A">5A</option>
 															 <option value="5B">5B</option>
 															 <option value="6">6</option>
-															 <option value="6">7</option>
-															 <option value="6">8</option>
-															 <option value="6">9</option>
-															 <option value="6">10</option>
-															 <option value="6">11</option>
+															 <option value="7A">7A</option>
+															 <option value="7B">7B</option>
+															 <option value="8">8</option>
+															 <option value="9">9</option>
+															 <option value="10">10</option>
+															 <option value="10">11</option>
 														</select>
 													</div>
 										</div>
 										<div class="form-2 col-2  col-xs-8 col-sm-8 col-lg-2">
 													 <div class="form-group">
-														 <label for="exampleFormControlSelect1">Portatil</label>
-														 <select class="form-control" id="exampleFormControlSelect1" name="Portatil">
+														 <label for="">Portatil</label>
+														 <select class="form-control" id="s" name="Portatil">
 														 	 <option value="">Seleccionar</option>
 															 <option value="1">1</option>
 															 <option value="2">2</option>
@@ -131,8 +136,8 @@
 										</div>
 												<div class="form-3 col-2  col-xs-8 col-sm-8 col-lg-2">
 													<div class="form-group">
-														<label for="exampleFormControlSelect1">Videobeam</label>
-														<select class="form-control" id="exampleFormControlSelect1" name="Videobeam">
+														<label for="">Videobeam</label>
+														<select class="form-control" id="d" name="Videobeam">
 																<option value="">Seleccionar</option>
 														  	<option value="1">1</option>
 															 <option value="2">2</option>
@@ -146,8 +151,8 @@
 												</div>
 												<div class="form-4 col-2  col-xs-8 col-sm-8  col-lg-2">
 													<div class="form-group">
-														<label for="exampleFormControlSelect1">Extenciones</label>
-														<select class="form-control" id="exampleFormControlSelect1" name="Extenciones">
+														<label for="">Extenciones</label>
+														<select class="form-control" id="" name="Extenciones">
 														<option value="">Seleccionar</option>
 															 <option value="1">1</option>
 															 <option value="2">2</option>
@@ -176,7 +181,6 @@
 																	<th scope="col">Extenciones</th>
 																	<th scope="col">Nombre</th>
 																	<th scope="col">H.I</th>
-																	<th scope="col">H.F</th>
 																	<th scope="col">VD</th>
 																</tr>
 															</thead>
@@ -207,120 +211,15 @@
 										  <div class="row">
 												   <div class="search col-10">
 															<div class="form-group">
-																	<input type="password" class="form-control" id="exampleFormControlInput1" placeholder="">
+																	<input type="text" class="form-control" id="caja_busqueda" placeholder="" nama="caja_busqueda">
 																 </div>
 													 </div>
 													 <div class="icon-search1">
 														    <span class="icon-search"></span>
 													 </div>
 											</div>
-											<div class="list-table col-12">
-													<table class="table">
-															<thead class="thead-dark">
-																<tr>
-																	<th scope="col">#</th>
-																	<th scope="col">Fecha</th>
-																	<th scope="col">Grado</th>
-																	<th scope="col">Portatil</th>
-																	<th scope="col">Videobeam</th>
-																	<th scope="col">Extenciones</th>
-																	<th scope="col">H.I</th>
-																	<th scope="col">H.F</th>
-																	<th scope="col">VD</th>
-																</tr>
-															</thead>
-															<tbody>
-																<tr>
-																	<th scope="row">1</th>
-																	<td>Mark</td>
-																	<td>Otto</td>
-																	<td>@mdo </td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo 
-                                                                       <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary icon-pencil" data-toggle="modal" data-target="#exampleModalCentert">
-	
-	  </button>
-	  
-	  <!-- Modal -->
-	  <div class="modal fade" id="exampleModalCentert" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-		  <div class="modal-content">
-			<div class="modal-header">
-			  <h5 class="modal-title" id="exampleModalCenterTitlet">Modal title</h5>
-			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			  </button>
-			</div>
-			<div class="modal-body">
-					<div class="form-group">
-							<label for="exampleFormControlInput1">Code User</label>
-							<input type="password" class="form-control" id="exampleFormControlInput1" placeholder="">
-					 </div>
-			</div>
-			<div class="modal-footer">
-			  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			  <button type="button" class="btn btn-primary">Save changes</button>
-			</div>
-		  </div>
-		</div>
-	  </div>    
-	  <button type="button" class="btn btn-danger icon-cross" data-toggle="modal" data-target="#exampleModalCenter">
-		
-		</button>
-		
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		  <div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-			  <div class="modal-header">
-				<h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				  <span aria-hidden="true">&times;</span>
-				</button>
-			  </div>
-			  <div class="modal-body">
-					  <div class="form-group">
-							  <label for="exampleFormControlInput1">Code User</label>
-							  <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="">
-					   </div>
-			  </div>
-			  <div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save</button>
-			  </div>
-			</div>
-		  </div>
-		</div>
-																	</td>
-																</tr>
-																<tr>
-																	<th scope="row">2</th>
-																	<td>Jacob</td>
-																	<td>Thornton</td>
-																	<td>@fat </td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo </td>
-																</tr>
-																<tr>
-																	<th scope="row">3</th>
-																	<td>Larry</td>
-																	<td>the Bird</td>
-																	<td>@twitter</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																	<td>@mdo</td>
-																</tr>
-															</tbody>
-														</table>
+											<div class="list-table col-12" id="datos"> 
+												 <?php  $busqueda2->BuscarList(); ?>
 											</div>
 									</div>
 						</div>
@@ -360,8 +259,8 @@
 			</div>
 			<div class="modal-body">
 					<div class="form-group">
-							<label for="exampleFormControlInput1">Code User</label>
-							<input type="password" class="form-control" id="exampleFormControlInput1" placeholder="">
+							<label for="">Code User</label>
+							<input type="password" class="form-control" id="5" placeholder="">
 					 </div>
 			</div>
 			<div class="modal-footer">
@@ -387,8 +286,8 @@
 			  </div>
 			  <div class="modal-body">
 					  <div class="form-group">
-							  <label for="exampleFormControlInput1">Code User</label>
-							  <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="">
+							  <label for="">Code User</label>
+							  <input type="password" class="form-control" id="h" placeholder="">
 					   </div>
 			  </div>
 			  <div class="modal-footer">
@@ -426,7 +325,7 @@
 											 <span class="icon-laptop"> <p>5</p></span>
 										</div>
 										<div class="portatiles col-1">
-												<span class="icon-video-camera"> <p>5</p></span>
+												<span class="icon-video-camera"><p>5</p></span>
 										   </div>
 										   <div class="portatiles col-1">
 												<span class="icon-power"> <p>5</p></span>
@@ -437,5 +336,6 @@
 						</div>								
 <script src="../js/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<script src="../js/main.js" ></script>
 </body>
 </html>

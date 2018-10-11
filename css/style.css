@@ -11,7 +11,7 @@ label{color: black;}
 /*style of portada*/
 .container-fluid .row .portada img { width: 100%;}
 .container-fluid .row .portada .guide {position: relative; top:40px; }
-.container-fluid .row .portada .guide a{border:2px solid white; padding:5px; color:white; text-decoration: none; }
+.container-fluid .row .portada .guide a{border:2px solid rgb(255, 255, 255); padding:5px; color:white; text-decoration: none; }
 .container-fluid .row .footer h4{ text-align: center;line-height:78px; color: white;}
 .container-fluid .row .footer{background: #005a99;}
 /*responsive*/
