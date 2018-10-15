@@ -50,6 +50,7 @@ if($resultado->num_rows > 0){
 <span aria-hidden='true'>&times;</span>
 </button>
 </div>
+<form action='edictar.html' method='GET'>
 <div class='modal-body'>
 <div class='form-group'>
 <label for=''>Code User</label>
@@ -57,8 +58,9 @@ if($resultado->num_rows > 0){
 </div>
 </div>
 <div class='modal-footer'>
-<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-<button type='button' class='btn btn-primary'>Save changes</button>
+<button type='submit' class='btn btn-primary'>Edict</button>
+</form>
+<button type='sutmit ' class='btn btn-secondary' data-dismiss='modal'>Close</button>
 </div>
 </div>
 </div>
@@ -77,6 +79,7 @@ if($resultado->num_rows > 0){
 <span aria-hidden='true'>&times;</span>
 </button>
 </div>
+<form action='edictar.html' method='GET'>
 <div class='modal-body'>
 <div class='form-group'>
 <label for=''>Code User</label>
@@ -84,8 +87,9 @@ if($resultado->num_rows > 0){
 </div>
 </div>
 <div class='modal-footer'>
+<button type='sumit' class='btn btn-primary'>Edict</button>
+</from>
 <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-<button type='button' class='btn btn-primary'>Save</button>
 </div>
 </div>
 </div>
@@ -93,9 +97,12 @@ if($resultado->num_rows > 0){
 		</td>
 	</tr>";
 	}
-	$salida.="</tbody></table>";
+	$salida.="</tbody></table> 
+	<script src='../js/jquery.js'></script>
+<script src='../js/bootstrap.min.js'></script>
+	";
 }else{
-	$salida.="no hay datos";
+	$salida.="no hay datos :(";
 }
 echo $salida;
 $mysqli->close();

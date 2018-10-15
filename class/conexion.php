@@ -20,6 +20,4 @@ namespace pc;
 	}
    
  }
-
-/*$cone1  = new Conexion();*/
 ?>

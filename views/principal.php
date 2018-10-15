@@ -2,11 +2,11 @@
  use pc\Consult;
  use pc\Busqueda;
  require_once('../class/consult.php');
- require_once('../controllers/buscar.php');
  $consult2 = new Consult();
- $busqueda2 = new Busqueda();
+ $fecha1 = new  Consult();
  $result = $consult2->Consult1();
-
+$fecha= date("Y-m-d");
+ $result1 = $fecha1->Fecha($fecha);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +31,7 @@
 			 </div>
 		     <div class="row row-2">
 				  <div class="username col-4 col-xs-3">
+
 						<?php 
 					     	session_start();
 						  if(isset($_SESSION['u_nombre'])){
@@ -42,7 +43,7 @@
 				  <div class="titulo-principal col-8 col-xs-3">
 					   <h4>PC Rental</h4>
 					</div>
-					<div class="close col-2">
+					<div class="close col-2">  
 					<?php 
 								
 								if(isset($_SESSION['u_nombre'])){
@@ -52,7 +53,7 @@
 								}else{
 									header("location:../index.html");
 								}		
-				        ?>
+								?>
 					</div>
 			 </div>
 			<div class="row">
@@ -74,7 +75,7 @@
 						</div>
 					<div class="col-9 col-xs-11">
 					  <div class="tab-content" id="v-pills-tabContent">
-						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">1</div>
+						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">EN DESARROLLO</div>
 						<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 							 <div class="container">
 								  <div class="row">
@@ -219,7 +220,7 @@
 													 </div>
 											</div>
 											<div class="list-table col-12" id="datos"> 
-												 <?php  $busqueda2->BuscarList(); ?>
+											
 											</div>
 									</div>
 						</div>
@@ -238,10 +239,13 @@
 															</thead>
 															<tbody>
 																<tr>
-																	<th scope="row">1</th>
-																	<td>Mark</td>
-																	<td>Otto</td>
-																	<td>@mdo 
+																<?php 
+																foreach($result1 as $value){
+																	?><th scope="row"><?php echo $value['Id']?></th>
+																	<td><?php echo $value['NombreCompleto']?></td>
+																	<td><?php echo $value['Portatil']?></td>
+																	<td><?php echo $value['VG']?>
+														
 																	   	<!-- Button trigger modal -->
 <button type="button" class="btn btn-primary icon-pencil" data-toggle="modal" data-target="#exampleModalCentere">
 		
@@ -259,13 +263,15 @@
 			</div>
 			<div class="modal-body">
 					<div class="form-group">
+					  <form action="edictar.html" method="GET">
 							<label for="">Code User</label>
 							<input type="password" class="form-control" id="5" placeholder="">
 					 </div>
 			</div>
 			<div class="modal-footer">
+			  <button type="submit" class="btn btn-primary">Edict</button>
+						</form>
 			  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			  <button type="button" class="btn btn-primary">Save</button>
 			</div>
 		  </div>
 		</div>
@@ -286,31 +292,25 @@
 			  </div>
 			  <div class="modal-body">
 					  <div class="form-group">
-							  <label for="">Code User</label>
+							<form action="edictar.html" method="GET">
+
+								<label for="">Code User</label>
 							  <input type="password" class="form-control" id="h" placeholder="">
-					   </div>
-			  </div>
-			  <div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save</button>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-primary">Save</button>
+						</form>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 			  </div>
 			</div>
 		  </div>
 		</div>
 																 </td>
 																</tr>
-																<tr>
-																	<th scope="row">2</th>
-																	<td>Jacob</td>
-																	<td>Thornton</td>
-																	<td>@fat </td>
-																</tr>
-																<tr>
-																	<th scope="row">3</th>
-																	<td>Larry</td>
-																	<td>the Bird</td>
-																	<td>@twitter </td>
-																</tr>
+																<?php
+																}
+																?>
 															</tbody>
 														</table>
 											 </div>
